@@ -1,0 +1,445 @@
+*{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    zoom: 0;
+}
+body{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient( hsl(214, 47%, 23%),hsl(237, 49%, 15%)) ;
+
+}
+.container{padding: 180px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+background:linear-gradient( hsl(214, 47%, 23%),hsl(237, 49%, 15%)) ;
+color: white;
+
+}
+.types{
+    
+    display: flex;
+    width: 1000px;
+    justify-content: space-between;
+    align-items: center;
+    border: solid 2px white;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 25px;
+    
+    margin-bottom: 30px;
+}
+
+.score{
+    background-color: white;
+    color: black;
+    padding: 15px;
+    border-radius: 20px;
+    text-align: center;
+}
+.score h3{
+    color: blue;
+}
+.gameBord{
+    display: grid;
+grid-template-areas: 
+"one  tow"
+"three three";
+gap: 50px;
+position: relative;
+
+}
+.gameBord1{
+    display: grid;
+grid-template-areas: 
+"one  tow"
+"result result";
+gap: 150px;
+position: relative;
+display: none;
+}
+.result{
+    grid-area: result;
+    text-align: center;
+    font-size: 30px;
+}
+.result button{
+    padding: 15px;
+    font-size: 30px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+.gameBord1 .h2{
+font-size: 30px;
+letter-spacing: 2px;
+text-align: center;
+}
+.gameBord .one{
+    
+grid-area: one;
+width: 150px;
+z-index: 10;
+margin-right: 30px;
+background-color: white;
+height: 150px;
+border-radius: 50%;
+display: flex;
+align-content: center;
+justify-content: center;
+border: solid 20px  hsl(230, 89%, 62%);
+
+}
+.winner{
+    scale: 1.2;
+}
+.gameBord1 .one{
+grid-area: one;
+width: 250px;
+z-index: 10;
+margin-right: 30px;
+background-color: white;
+height: 250px;
+border-radius: 50%;
+display: flex;
+align-content: center;
+justify-content: center;
+border: solid 20px  hsl(230, 89%, 62%);
+
+}
+.one img{
+    
+    display: flex;
+align-self: center;
+    width: 80px;
+    height: 90px;
+}
+.gameBord .tow{
+width: 150px;
+z-index: 10;
+margin-right: 30px;
+background-color: white;
+height: 150px;
+border-radius: 50%;
+display: flex;
+align-content: center;
+justify-content: center;
+border: solid 20px hsl(39, 89%, 49%) ;
+grid-area: tow;
+}
+.gameBord1 .tow{
+width: 250px;
+z-index: 10;
+margin-right: 30px;
+background-color: white;
+height: 250px;
+border-radius: 50%;
+display: flex;
+align-content: center;
+justify-content: center;
+border: solid 20px hsl(39, 89%, 49%) ;
+grid-area: tow;
+}
+.tow img{
+    display: flex;
+align-self: center;
+    width: 80px;
+    height: 90px;
+}
+.gameBord .three{
+    z-index: 10;
+width: 150px;
+margin: auto;
+background-color: white;
+height: 150px;
+border-radius: 50%;
+display: flex;
+align-content: center;
+justify-content: center;
+border: solid 20px  hsl(349, 71%, 52%);
+grid-area: three;
+}
+.three img{
+    display: flex;
+align-self: center;
+    width: 80px;
+    height: 90px;
+}
+.line{
+    display: inline-block;
+    background-color: rgb(34, 26, 26);
+    height: 15px;
+    width: 200px;
+    position: absolute;
+    z-index: 9;
+    top: 90px;
+    right: 200px;
+}
+.line1{
+    display: inline-block;
+    background-color: rgb(34, 26, 26);
+    height: 15px;
+    width: 300px;
+    position: absolute;
+    z-index: 9;
+    top: 190px;
+    transform:rotate(65deg);
+    right: 250px;
+}
+.line2{
+      display: inline-block;
+    background-color: rgb(34, 26, 26);
+    height: 15px;
+    width: 300px;
+    position: absolute;
+    z-index: 9;
+    top: 190px;
+    transform:rotate(-65deg);
+    left:  250px;
+}
+.btn{
+    position: absolute;
+    right: 230px !important;
+    bottom:-150px;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 20px;
+
+}
+.one,.tow{
+    margin: 40px;
+}
+.one1 .h2,.tow1 .h2{
+    margin-top: 100px;
+}
+@media (max-width:1100px) {
+ .types{
+    
+    display: flex;
+    width: 800px;
+    justify-content: space-between;
+    align-items: center;
+    border: solid 2px white;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 25px;
+    
+    margin-bottom: 30px;
+}   
+.btn{
+    position: absolute;
+    right: 160px;
+    bottom: -180px;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 20px;
+
+}
+}
+.back{
+    border-radius: 20px;
+    position: absolute;
+    z-index: 11;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+        background: rgba(0,0,0,0.6);
+
+}
+.rules{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 30px;
+}
+.rules img{
+    margin-top: 50px;
+}
+.close-lightbox{
+    width: 50px;
+    height: 50px;
+    background-color: rgba(240, 248, 255, 0);
+    color: black;
+font-size: 50px;
+align-content: center;    
+border: none;
+position: absolute;
+right: 0;
+top: -40px;
+padding: 50px;
+}
+.hide{
+    display: none !important;
+}
+
+@media (max-width:900px) {
+.one1 .h2,.tow1 .h2{
+font-size: 20px;
+margin-top: 50px;
+margin-bottom: 30px;
+}
+ .types{
+    
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    align-items: center;
+    border: solid 2px white;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 25px;
+    
+    margin-bottom: 30px;
+}   
+.gameBord1{
+    display: grid;
+grid-template-areas: 
+"one  tow"
+"result result";
+gap: 0px;
+position: relative;
+display: none;
+}
+
+.gameBord{
+    gap: 0px;
+}
+
+
+.gameBord .one{
+    
+grid-area: one;
+width: 80px;
+z-index: 10;
+margin-right: 30px;
+background-color: white;
+height: 80px;
+border-radius: 50%;
+display: flex;
+align-content: center;
+justify-content: center;
+border: solid 20px  hsl(230, 89%, 62%);
+
+}
+.winner{
+    scale: 1.2;
+}
+.gameBord1 .one{
+grid-area: one;
+width: 80px;
+z-index: 10;
+margin-right: 30px;
+background-color: white;
+height: 80px;
+border-radius: 50%;
+display: flex;
+align-content: center;
+justify-content: center;
+border: solid 20px  hsl(230, 89%, 62%);
+
+}
+.one img{
+    
+    display: flex;
+align-self: center;
+    width: 40px;
+    height: 55px;
+}
+.gameBord .tow{
+width: 80px;
+z-index: 10;
+margin-right: 30px;
+background-color: white;
+height:80px;
+border-radius: 50%;
+display: flex;
+align-content: center;
+justify-content: center;
+border: solid 20px hsl(39, 89%, 49%) ;
+grid-area: tow;
+}
+.gameBord1 .tow{
+width: 80px;
+z-index: 10;
+margin-right: 30px;
+background-color: white;
+height: 80px;
+border-radius: 50%;
+display: flex;
+align-content: center;
+justify-content: center;
+border: solid 20px hsl(39, 89%, 49%) ;
+grid-area: tow;
+}
+.tow img{
+    display: flex;
+align-self: center;
+    width: 40px;
+    height: 55px;
+}
+.gameBord .three{
+    z-index: 10;
+width: 80px;
+margin: auto;
+background-color: white;
+height:80px;
+border-radius: 50%;
+display: flex;
+align-content: center;
+justify-content: center;
+border: solid 20px  hsl(349, 71%, 52%);
+grid-area: three;
+}
+.three img{
+    display: flex;
+align-self: center;
+    width: 40px;
+    height:55px;
+}
+.line{
+    display: inline-block;
+    background-color: rgb(34, 26, 26);
+    height: 15px;
+    width: 170px;
+    position: absolute;
+    z-index: 9;
+    top: 90px;
+    right: 150px;
+}
+.line1{
+    display: inline-block;
+    background-color: rgb(34, 26, 26);
+    height: 15px;
+    width: 170px;
+    position: absolute;
+    z-index: 9;
+    top: 190px;
+    transform:rotate(60deg);
+    right: 180px;
+}
+.line2{
+      display: inline-block;
+    background-color: rgb(34, 26, 26);
+    height: 15px;
+    width: 170px;
+    position: absolute;
+    z-index: 9;
+    top: 190px;
+    transform:rotate(-65deg);
+    left:  180px;
+}
+.btn{
+    right: 120px !important;
+}
+}
