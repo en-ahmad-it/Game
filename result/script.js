@@ -15,7 +15,7 @@ btn.addEventListener("click",()=>{
 let choses = document.querySelectorAll(".gameBord div");
 let gameBord = document.querySelector(".gameBord");
 let arr = ["Paper", "Scissor", "Rock"];
-let srcs = ["/images/icon-paper.svg", "/images/icon-scissors.svg", "/images/icon-rock.svg"];
+let srcs = ["images/icon-paper.svg", "images/icon-scissors.svg", "images/icon-rock.svg"];
 let result = document.querySelector(".result");
 let resulth1 = document.querySelector(".result h1");
 
